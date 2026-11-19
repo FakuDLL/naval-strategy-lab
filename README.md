@@ -2,6 +2,10 @@
 
 A browser-based naval tactics project built with Java 21, Spring Boot and vanilla JavaScript. It models fleet placement, turn-based combat and a shared campaign, with live updates between browser views.
 
+## Preview
+
+![Live turn-based combat in Naval Strategy Lab](docs/combat.png)
+
 ## Try it locally
 
 Install JDK 21 or newer, then open a terminal in this directory. The Maven Wrapper downloads Maven and dependencies on the first run.
@@ -33,3 +37,7 @@ node --test src/test/js/juego.test.mjs
 ```
 
 On macOS or Linux, use `sh ./mvnw test`. The Java tests cover domain rules, tactics and local HTTP handlers. The Node.js suite covers browser-side state and event handling without installing packages.
+
+## Third-party notices
+
+The bundled Maven Wrapper 3.3.4 scripts use the Apache License 2.0. See the [license text](third-party/maven-wrapper/LICENSE) and [upstream notice](third-party/maven-wrapper/NOTICE), which apply to the Maven Wrapper files.
