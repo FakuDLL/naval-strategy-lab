@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Naval Strategy Lab · Sala de operaciones</title>
+        <link rel="stylesheet" href="/css/juego.css" />
+    </head>
+    <body>
+        <header>
+            <div class="marca">NAVAL STRATEGY LAB <span>OPERACIONES NAVALES</span></div>
+            <p id="conexion" role="status">Conectando…</p>
+        </header>
+        <main>
+            <p id="error" role="alert" hidden></p>
+            <section id="sala" hidden>
+                <div class="encabezado">
+                    <div>
+                        <p class="etiqueta">CAMPAÑA COMPARTIDA</p>
+                        <h1>Sala de operaciones</h1>
+                        <p>
+                            Prepará tu flota y elegí dónde librar la próxima
+                            batalla.
+                        </p>
+                    </div>
+                    <button id="nueva-batalla">Iniciar nueva batalla</button>
+                </div>
+                <div class="indicadores">
+                    <article>
+                        <span>Batallas ganadas</span
+                        ><strong id="ganadas">0</strong>
+                    </article>
+                    <article>
+                        <span>Batallas perdidas</span
+                        ><strong id="perdidas">0</strong>
+                    </article>
+                    <article>
+                        <span>Éxito de la campaña</span
+                        ><strong id="exito">0%</strong>
+                    </article>
+                </div>
+                <div class="tabla">
+                    <table>
+                        <caption>
+                            Batallas de la campaña
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Lugar del combate</th>
+                                <th>Océano</th>
+                                <th>Estado</th>
+                                <th>Flota propia</th>
+                                <th>Flota enemiga</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="batallas"></tbody>
+                    </table>
+                </div>
+            </section>
+            <section id="nueva" hidden>
+                <p class="etiqueta">NUEVA MISIÓN</p>
+                <h1>Preparar una nueva batalla</h1>
+                <form id="formulario" novalidate>
+                    <div class="campos">
+                        <label
+                            >Lugar del combate<input
+                                name="nombre"
+                                autocomplete="off"
+                                placeholder="Opcional: se generará un nombre" /></label
+                        ><label
+                            >Táctica del oponente<select
+                                name="tactica"
+                                id="tacticas"
+                            ></select></label
+                        ><label
+                            >Celdas horizontales<input
+                                name="ancho"
+                                inputmode="numeric"
+                                value="10" /></label
+                        ><label
+                            >Celdas verticales<input
+                                name="alto"
+                                inputmode="numeric"
+                                value="10"
+                        /></label>
+                    </div>
+                    <fieldset>
+                        <legend>Composición de la flota</legend>
+                        <p>
+                            Entre 0 y 6 barcos de cada tipo. La flota debe
+                            ocupar menos del 25% del océano.
+                        </p>
+                        <div id="tipos" class="campos"></div>
+                    </fieldset>
+                    <div class="acciones">
+                        <button type="submit">Continuar</button
+                        ><button type="button" class="secundario volver">
+                            Volver a la sala de operaciones
+                        </button>
+                    </div>
+                </form>
+            </section>
+            <section id="batalla" hidden>
+                <p class="etiqueta" id="titulo-batalla"></p>
+                <div class="encabezado">
+                    <h1 id="lugar"></h1>
+                    <button class="secundario volver">
+                        Volver a la sala de operaciones
+                    </button>
+                </div>
+                <p id="situacion"></p>
+                <div id="preparacion">
+                    <div class="preparacion">
+                        <div>
+                            <h2>Barcos disponibles</h2>
+                            <ol id="pendientes"></ol>
+                        </div>
+                        <label
+                            >Orientación<select id="orientacion">
+                                <option value="HORIZONTAL">Horizontal</option>
+                                <option value="VERTICAL">Vertical</option>
+                            </select></label
+                        ><button id="iniciar">Librar batalla</button>
+                    </div>
+                </div>
+                <p id="accion" class="aviso"></p>
+                <div id="tableros"></div>
+            </section>
+        </main>
+        <footer>Batalla Naval · Diseño de aplicaciones</footer>
+        <script type="module" src="/js/juego.js"></script>
+    </body>
+</html>

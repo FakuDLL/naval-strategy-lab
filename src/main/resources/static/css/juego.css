@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: #f3f6f8;
+    color: #183143;
+    font:
+        16px/1.5 system-ui,
+        sans-serif;
+}
+header {
+    background: #102c3d;
+    color: white;
+    padding: 24px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #40b7b0;
+}
+.marca {
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+.marca span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #a8c7d1;
+}
+#conexion {
+    font-size: 13px;
+    color: #bfe5dd;
+}
+main {
+    max-width: 1260px;
+    margin: 44px auto;
+    padding: 0 28px;
+    min-height: 65vh;
+}
+h1 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.15;
+    margin: 8px 0 16px;
+}
+h2 {
+    font-size: 18px;
+}
+.etiqueta {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #087d78;
+}
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+button {
+    border: 0;
+    border-radius: 7px;
+    padding: 12px 20px;
+    background: #087d78;
+    color: white;
+    font: 600 15px system-ui;
+    cursor: pointer;
+    white-space: normal;
+}
+button:hover {
+    background: #076763;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #e8b84d;
+    outline-offset: 3px;
+}
+.secundario {
+    color: #193e50;
+    background: #e1eaf0;
+}
+.secundario:hover {
+    background: #cedee7;
+}
+.indicadores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 30px 0;
+}
+.indicadores article {
+    background: white;
+    border: 1px solid #d8e3e8;
+    padding: 22px;
+    border-radius: 10px;
+}
+.indicadores span {
+    display: block;
+    color: #536c79;
+    font-size: 14px;
+}
+.indicadores strong {
+    display: block;
+    font-size: 36px;
+    margin-top: 8px;
+}
+.tabla {
+    overflow-x: auto;
+    border: 1px solid #d8e3e8;
+    background: white;
+    border-radius: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    white-space: nowrap;
+}
+caption {
+    text-align: left;
+    font-weight: 700;
+    padding: 18px 22px;
+}
+th,
+td {
+    padding: 17px 20px;
+    border-top: 1px solid #e0e8ed;
+}
+th {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #536c79;
+    background: #f9fbfc;
+}
+td:first-child {
+    font-weight: 650;
+}
+td button {
+    padding: 8px 14px;
+}
+.campos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-weight: 600;
+}
+input,
+select {
+    font: inherit;
+    padding: 11px;
+    border: 1px solid #aebfc9;
+    border-radius: 6px;
+    background: white;
+    color: #183143;
+    min-width: 0;
+}
+fieldset {
+    border: 1px solid #c5d4dd;
+    border-radius: 10px;
+    padding: 24px;
+    margin: 28px 0;
+    background: white;
+}
+legend {
+    font-weight: 700;
+}
+.acciones {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.preparacion {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: white;
+    border: 1px solid #d8e3e8;
+    border-radius: 10px;
+}
+#pendientes {
+    padding-left: 24px;
+    margin: 0;
+}
+#pendientes li:first-child {
+    font-weight: 750;
+    color: #087d78;
+}
+.aviso {
+    padding: 14px 18px;
+    background: #e1f1ee;
+    border-left: 4px solid #087d78;
+}
+#error {
+    padding: 16px;
+    background: #fff0ed;
+    border: 1px solid #bf493d;
+    border-radius: 8px;
+    color: #922d24;
+}
+#tableros {
+    margin: 24px 0;
+    overflow-x: auto;
+}
+footer {
+    text-align: center;
+    color: #627987;
+    padding: 30px;
+    font-size: 13px;
+}
+[hidden] {
+    display: none !important;
+}
+@media (max-width: 700px) {
+    header {
+        padding: 18px;
+    }
+    .encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    main {
+        padding: 0 16px;
+        margin: 26px auto;
+    }
+    .indicadores {
+        gap: 8px;
+    }
+    .indicadores article {
+        padding: 14px;
+    }
+    .indicadores strong {
+        font-size: 27px;
+    }
+    .indicadores span {
+        font-size: 12px;
+    }
+    .preparacion {
+        gap: 18px;
+    }
+    th,
+    td {
+        padding: 12px;
+    }
+}

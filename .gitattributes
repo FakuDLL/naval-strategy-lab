@@ -1,0 +1,9 @@
+* text=auto
+/mvnw text eol=lf
+/mvnw.cmd text eol=crlf
+*.java text eol=lf
+*.md text eol=lf
+*.pdf binary
+# Conservar los bytes de las bibliotecas suministradas.
+/src/main/resources/static/js/CommandDispatcher.js -text
+/src/main/resources/static/js/BattleShipBoard.js -text
